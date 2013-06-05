@@ -4,6 +4,11 @@ scalaz7-validation-example
 An interactive strawman proposal for a way we might consider using 
 Scalaz 7 validations with the new, less-haskell-oriented syntax.
 
+Proposed benefits of this syntax:
+  * no starship operators **<*>** nor **|@|**, etc
+  * normal function application order: **f(x, y, z)**
+  * one-liner to wrap any function to handle validated input and output
+
 Read the [strawman code proposal](strawman.scala).
 
 
