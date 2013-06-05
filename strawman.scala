@@ -14,7 +14,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 // Imports the minimum necessary parts of Scalaz for the usage below
-import scalaz.{Applicative, NonEmptyList, Scalaz, Validation}
+import scalaz.{Applicative, NonEmptyList, Validation}
 import scalaz.syntax.validation._ 
 
 // We want to return either a type X, or a non-empty list of strings for error messages
