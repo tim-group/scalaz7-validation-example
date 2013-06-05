@@ -89,7 +89,7 @@ val invalidNeg = validateNegative(1)  // Either[String, Int] = Left(invalid num)
 implicit def e2v[X](e: Either[String, X]) = Validation.fromEither(e).toValidationNel 
 
 // We're good to go!
-addValidated(validNeg,   validNeg)    // Validated[Int] = Success(-2)
+addValidated(validNeg,   validNeg)    // Validation[NonEmptyList[String],Int] = Success(-2)
 addValidated(validNeg,   invalidNeg)  // Validation[NonEmptyList[String],Int] = Failure(NonEmptyList(invalid num, invalid num))
 addValidated(invalidNeg, invalidNeg)  // Validation[NonEmptyList[String],Int] = Failure(NonEmptyList(invalid num, invalid num))
 
