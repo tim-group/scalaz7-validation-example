@@ -85,7 +85,7 @@ def validateNegative(n: Int) = if (n < 0) Right(n) else Left("invalid num")
 val validNeg   = validateNegative(-1) // Either[String, Int] = Right(-1)
 val invalidNeg = validateNegative(1)  // Either[String, Int] = Left(invalid num)
 
-// We can user define an implicit conversion in a limited scope...
+// We can use an implicit conversion defined in a limited scope...
 implicit def e2v[X](e: Either[String, X]) = Validation.fromEither(e).toValidationNel 
 
 // We're good to go!
@@ -93,7 +93,7 @@ addValidated(validNeg,   validNeg)    // Validated[Int] = Success(-2)
 addValidated(validNeg,   invalidNeg)  // Validation[NonEmptyList[String],Int] = Failure(NonEmptyList(invalid num, invalid num))
 addValidated(invalidNeg, invalidNeg)  // Validation[NonEmptyList[String],Int] = Failure(NonEmptyList(invalid num, invalid num))
 
-// But wait, that's *too much magic* can we just be explicit? Sure...
+// But wait, that's *too much magic* for me, can't we just be explicit? Sure...
 addValidated(e2v(validNeg), e2v(invalidNeg))
 
 //
