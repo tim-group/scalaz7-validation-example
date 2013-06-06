@@ -19,7 +19,7 @@ This strawman is all set up for you to load it in the Scala console and play wit
 
 Assumptions:
   1. You've cloned this git repo, and are in the directory of the repo
-  2. You've installed [sbt-extras](https://github.com/paulp/sbt-extras) as `sbt-extras.sh`
+  2. You've installed [sbt-extras](https://github.com/paulp/sbt-extras) as `sbt-extras.sh` (note: this is already puppeted to all TIM Group developers)
   
 
 Just type:
