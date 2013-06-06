@@ -90,7 +90,7 @@ implicit def e2v[X](e: Either[String, X]) = Validation.fromEither(e).toValidatio
 
 // We're good to go!
 addValidated(validNeg,   validNeg)    // Validation[NonEmptyList[String],Int] = Success(-2)
-addValidated(validNeg,   invalidNeg)  // Validation[NonEmptyList[String],Int] = Failure(NonEmptyList(invalid num, invalid num))
+addValidated(validNeg,   invalidNeg)  // Validation[NonEmptyList[String],Int] = Failure(NonEmptyList(invalid num))
 addValidated(invalidNeg, invalidNeg)  // Validation[NonEmptyList[String],Int] = Failure(NonEmptyList(invalid num, invalid num))
 
 // But wait, that's *too much magic* for me, can't we just be explicit? Sure...
